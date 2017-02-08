@@ -1,0 +1,134 @@
+<html>
+<head>
+	<title>Sydney</title>
+	<style>
+		img
+		{
+			width:100px;
+			height:100px;
+		}
+		.wrapper
+		{
+			height:100%;
+			width:50%;
+			margin:0 auto;
+		}
+		.top-button
+		{
+			margin:80 auto;
+		}
+		#division
+		{
+			
+			
+		}
+		ul
+		{
+			list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		}
+		li a
+		{
+			display: block;
+			text-align: center;
+		}
+		.top-nav
+		{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="top-button">
+		<img id="imageButton1"  onclick="changes(3);" src="http://www.iconsplace.com/icons/preview/red/number-1-filled-256.png">
+		<img id="imageButton2"  onclick="changes(4);" src="http://www.iconsdb.com/icons/preview/royal-blue/2-filled-xxl.png">
+		<img id="imageButton3"  onclick="changes(5);"  src="http://www.iconsdb.com/icons/preview/green/7-filled-xxl.png">
+	</div>
+
+	<div id="division" class="top-nav">	
+			<img  id="iconlink1" src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-128.png">
+			<img  id="iconlink2" src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-128.png">
+			<img  id="iconlink3" src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-128.png">
+	</div>
+
+
+
+
+
+</div>
+<script>
+var i;
+var x;
+var images = document.getElementsByTagName("IMG");
+var changes = function(count)
+				{
+					x = count;
+					if(count==3)
+					{
+						images[3].style.background = "red";
+						images[4].onmouseover = function()
+						{
+						 			images[4].style.background = "red";
+						 			
+						}
+						images[5].onmouseover = function()
+						{
+						 			images[5].style.background = "red";
+						 			
+						}			
+												
+					}
+					else if(count==4)
+					{
+						images[3].style.background = "blue";
+						images[4].onmouseover = function()
+						{
+						 			images[4].style.background = "blue";
+						 			
+						}
+						images[5].onmouseover = function()
+						{
+						 			images[5].style.background = "blue";
+						 			
+						}			
+
+					}
+					else if(count==5)
+					{
+						images[3].style.background = "green";
+						images[4].onmouseover = function()
+						{
+						 			images[4].style.background = "green";
+						 			
+						}
+						images[5].onmouseover = function()
+						{
+						 			images[5].style.background = "green";
+						 			
+						}			
+					}
+
+				}
+		
+
+for(i=3;i<images.length;i++)
+{
+		images[i].onmouseleave = function()
+		{
+			
+					for(i=4;i<images.length;i++)
+					{
+						images[i].style.background ="white";
+					} 
+		}
+}
+
+
+
+
+</script>
+</body>
+</html>
